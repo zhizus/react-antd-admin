@@ -38,6 +38,11 @@ const routes = (
           <Route path="option1" tableName="test" getComponent={DBTableContainer}/>
           <Route path="option2" tableName="testSms" getComponent={DBTableContainer}/>
           <Route path="option3" tableName="testAction" getComponent={DBTableContainer}/>
+          <Route path="order_query" tableName="order" getComponent={DBTableContainer}/>
+        </Route>
+
+        <Route path="order_center">
+          <Route path="order_query" tableName="order" getComponent={DBTableContainer}/>
         </Route>
 
         <Route path="daohang">

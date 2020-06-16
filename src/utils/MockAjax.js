@@ -7,7 +7,7 @@ const result = {  // 暂存mock的ajax返回, 总共有5个字段
   success: true,
   code: 0,
   message: 'just a mock ;) ',
-  total: 10000,
+  total: 100,
   data: {},
 };
 
@@ -20,7 +20,7 @@ const mockPromise = (callback) => {
 
 // 根据某个表的dataSchema创造mock数据
 const mockResult = (tableName, queryObj) => {
-  logger.debug('begin to mock data for table %s', tableName);
+  logger.info('begin to mock data for table %s', tableName);
 
   // 尝试加载schema文件
   let schema;
@@ -39,8 +39,9 @@ const mockResult = (tableName, queryObj) => {
   if (!queryObj.page) {
     queryObj.page = 1;
   }
+
   if (!queryObj.pageSize) {
-    queryObj.pageSize = 50;
+    queryObj.pageSize = 10;
   }
 
   const tmp = [];

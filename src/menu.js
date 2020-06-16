@@ -43,6 +43,13 @@ const sidebarMenu = [
     key: 'order_center',
     name: '订单中心',
     icon: 'clock-circle',
+    child: [
+      {
+        key: 'order_query',
+        name: '订单查询',
+        icon: 'play-circle',   // 二级三级菜单也可以带图标
+      },
+    ],
   },
   {
     key: 'alone2',
